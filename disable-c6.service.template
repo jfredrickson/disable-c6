@@ -6,7 +6,7 @@ Before=basic.target
 
 [Service]
 Type=oneshot
-ExecStart={{PREFIX}}/lib/zenstates.py --c6-disable
+ExecStart={{PREFIX}}/bin/zenstates.py --c6-disable
 
 [Install]
 WantedBy=basic.target
