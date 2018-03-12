@@ -30,10 +30,10 @@ while [ $# -gt 0 ] ; do
 done
 
 mkdir -p $PREFIX/lib
+mkdir -p $SYSTEMD_UNIT_DIR
 
 sed "s@{{PREFIX}}@$PREFIX@" disable-c6.service.template > $SYSTEMD_UNIT_DIR/disable-c6.service
 install lib/ZenStates-Linux/zenstates.py $PREFIX/lib/zenstates.py
-ln -sf $PREFIX/lib/disable-c6.service /etc/systemd/system
 
 echo "Installed disable-c6 service. You may want to:"
 echo "    systemctl enable disable-c6.service"
