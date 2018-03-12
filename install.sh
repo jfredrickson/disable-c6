@@ -24,10 +24,6 @@ while [ $# -gt 0 ] ; do
   shift
 done
 
-if [ ! -d $PREFIX ] ; then
-  mkdir -p $PREFIX
-fi
-
 mkdir -p $PREFIX/lib
 
 sed "s@{{PREFIX}}@$PREFIX@" disable-c6.service.template > $PREFIX/lib/disable-c6.service
