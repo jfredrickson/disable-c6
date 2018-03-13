@@ -2,6 +2,8 @@
 
 A systemd service to disable the C6 state upon system boot, preventing Ryzen freezes.
 
+This simply installs `zenstates.py` from [ZenStates-Linux](https://github.com/r4m0n/ZenStates-Linux) and creates a one-shot service based on it.
+
 ## Installation
 
 ```
