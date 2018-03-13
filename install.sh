@@ -35,6 +35,22 @@ mkdir -p $SYSTEMD_UNIT_DIR
 sed "s@{{PREFIX}}@$PREFIX@" disable-c6.service.template > $SYSTEMD_UNIT_DIR/disable-c6.service
 install lib/ZenStates-Linux/zenstates.py $PREFIX/bin/zenstates.py
 
-echo "Installed disable-c6 service. You may want to:"
-echo "    systemctl enable disable-c6.service"
-echo "    systemctl start disable-c6.service"
+echo "Installed disable-c6 service."
+
+while true ; do
+  read -p "Would you like to enable and start the service now [y/n]? " YN
+  case $YN in
+    [Yy]*)
+      systemctl enable disable-c6.service
+      systemctl start disable-c6.service
+      echo "Enabled disable-c6 service."
+      exit 0
+      ;;
+    [Nn]*)
+      echo "To enable and start the service:"
+      echo "    systemctl enable disable-c6.service"
+      echo "    systemctl start disable-c6.service"
+      exit 0
+      ;;
+  esac
+done
