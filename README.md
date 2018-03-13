@@ -14,8 +14,6 @@ systemctl enable disable-c6.service
 systemctl start disable-c6.service
 ```
 
-This will install a systemd unit called `disable-c6` to the default location, `/opt/disable-c6`, and create a symlink in `/etc/systemd/system`. You can customize the install prefix by running the `install.sh` script with the `--prefix` parameter:
+This will install a systemd unit called `disable-c6` to the default location, `/opt/disable-c6`, and create a symlink in `/etc/systemd/system`.
 
-```
-sudo ./install.sh --prefix=/usr/local
-```
+You can also customize the install location and specify where your systemd unit files are stored. See `./install.sh --help` for options.
