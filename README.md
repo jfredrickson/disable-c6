@@ -18,6 +18,6 @@ cd disable-c6
 sudo ./install.sh
 ```
 
-This will install a systemd unit called `disable-c6` to the default location, `/opt/disable-c6`, and create a symlink in `/etc/systemd/system`.
+This will install a systemd unit called `disable-c6` to the default location, `/usr/local/lib/systemd/system/disable-c6.service`, and offer to enable/start the service for you.
 
-You can also customize the install location and specify where your systemd unit files are stored. See `./install.sh --help` for options.
+You can also customize the install location. See `./install.sh --help` for options.
