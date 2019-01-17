@@ -15,6 +15,8 @@ Refer to your specific distribution and init system to find out how to load kern
 ```
 git clone https://github.com/jfredrickson/disable-c6.git
 cd disable-c6
+git submodule init
+git submodule update
 sudo ./install.sh
 ```
 
