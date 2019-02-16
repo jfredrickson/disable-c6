@@ -12,6 +12,18 @@ Refer to your specific distribution and init system to find out how to load kern
 
 ## Installation
 
+### Arch Linux
+
+This package is available on the AUR as [`disable-c6-systemd`](https://aur.archlinux.org/packages/disable-c6-systemd/). Use your preferred AUR install method. For instance, using [`yay`](https://aur.archlinux.org/packages/yay/) to install:
+
+```
+yay -S disable-c6-systemd
+sudo systemctl enable disable-c6.service
+sudo systemctl start disable-c6.service
+```
+
+### Others
+
 ```
 git clone https://github.com/jfredrickson/disable-c6.git
 cd disable-c6
